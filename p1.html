@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="x-icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Japan Academy</title>
+</head>
+<body>
+    <nav class="navbar">
+            <div class="navbar-container">
+              <a href="index.html" class="navbar-logo">Japan Academy</a></div>
+                 <button class="navbar-toggle">
+                     <span class="bar"></span>
+                     <span class="bar"></span>
+                     <span class="bar"></span>
+                 </button>
+                 <ul class="navbar-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="active">Download</a></li>
+                 </ul>
+        </nav><br><br><br><br>
+    
+<div class="cards-container">
+  <!-- Card 1 -->
+  <div class="card">
+    <h3>🔒 Japan Tute 01</h3>
+    <div class="lockBox" data-code="A9k2M7">
+      <input type="password" placeholder="Enter code">
+      <button class="unlockBtn">Unlock</button>
+    </div>
+    <button class="proceedBtn" disabled data-file="日本語.pdf">Download</button>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <h3>🔒 ජපන් වචන පොත</h3>
+    <div class="lockBox" data-code="4Bq7L2">
+      <input type="password" placeholder="Enter code">
+      <button class="unlockBtn">Unlock</button>
+    </div>
+    <button class="proceedBtn" disabled data-file="ජපන් වචන පොත.pdf">Download</button>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <h3>🔒 Secure Access</h3>
+    <div class="lockBox" data-code="Z8mK3P">
+      <input type="password" placeholder="Enter code">
+      <button class="unlockBtn">Unlock</button>
+    </div>
+    <button class="proceedBtn" disabled data-file="files/fileC.pdf">Download</button>
+  </div>
+</div>
+
+
+
+
+
+<script>
+document.querySelectorAll(".card").forEach(card => {
+  const lockBox = card.querySelector(".lockBox");
+  const input = lockBox.querySelector("input");
+  const unlockBtn = lockBox.querySelector(".unlockBtn");
+  const proceedBtn = card.querySelector(".proceedBtn");
+
+  unlockBtn.addEventListener("click", () => {
+    if (input.value === lockBox.dataset.code) {
+      lockBox.style.display = "none";
+      proceedBtn.disabled = false;
+    } else {
+      alert("❌ Wrong code");
+    }
+  });
+
+  input.addEventListener("keypress", e => {
+    if (e.key === "Enter") unlockBtn.click();
+  });
+
+  proceedBtn.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.href = proceedBtn.dataset.file;
+    link.download = "";
+    link.click();
+  });
+});
+</script>
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
+
+
+
+
+6R2aX9
+
+Q5N8c2
+
+7Dk4M9
+
+P3L9A6
+
+M8Q4K2
+
+2X7N5D
+
+9A6K3M
