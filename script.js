@@ -19,7 +19,7 @@ const card = document.querySelector(".login-card");
 
 function login() {
   const correctUser = "admin";
-  const correctPass = "abc123JA";
+  const correctPass = "1234";
 
   if (card.classList.contains("locked")) return;
 
@@ -64,6 +64,7 @@ function unlock() {
   card.classList.remove("locked");
   lockMsg.textContent = "You can try again";
 }
+
 
 
 
